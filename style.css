@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --ff-primary:'Staatliches', cursive;
+  --ff-secondary: 'Roboto', sans-serif;
+  --ff-secondary1: 'Open Sans', sans-serif;
+  --bg-body: 	hsla(0, 0%, 90%, 1);
+  --bg-primary: hsla(218, 17%, 62%, 1);
+  --bg-secondary: hsla(0, 0%, 100%, 1);
+  --bg-h1: hsla(275, 18%, 79%, 1);
+  --fs-h1: 4.8rem;
+  --fs-primary: 2.4rem;
+  --fs-secondary: 1.4rem;
+  --fc-primary: hsla(0, 0%, 100%, 1);
+  --fc-secondary: hsla(232, 17%, 35%, 1);
+}
+body {
+  background-color: var(--bg-body);
+}
+.page {  
+  margin: 0 auto 3rem;
+  text-align: center;
+  max-width: 37.5rem;  
+}
+img {
+  width: 100%;
+  height: auto;
+}
+header {
+  max-width: 37.5rem;
+  background-color: var(--bg-primary);
+  margin-top: 6rem;
+}
+header img {
+  max-width: 21.4rem;
+  margin-top: 3.2rem;
+}
+header h1 {
+  font-family: var(--ff-primary);
+  color: var(--fc-primary);
+  font-size: var(--fs-h1);
+  line-height: 3.4rem;
+  margin-top: 3.2rem;
+  padding: 2.1rem 5.3rem;
+  background-color: var(--bg-h1);
+}
+header p {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-primary);
+  line-height: 2rem;
+  color: var(--fc-primary);
+  margin-top: 3.2rem;
+  padding: 0 4.8rem 12.5rem;
+}
+main {
+  background-color: var(--bg-secondary);
+  padding: 3.2rem 4.3rem 6rem;
+}
+.container {
+  display: grid;
+  gap: 3.2rem;
+}
+.imagens {
+  display: grid;
+  gap: 3.2rem;
+}
+imagens img {
+  width: 21.4rem;
+  height: auto;
+}
+.imagens img:hover {
+  transform: scale(1.1);
+}
+footer {
+  font-family: var(--ff-secondary1);
+  font-size: var(--fs-secondary);
+  line-height: 2.8rem;
+  color: var(--fc-secondary);
+  margin-top: 3.2rem;
+}
+footer span {
+  font-weight: 700;
+}
+
+@keyframes topdown{
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 700px){
+  .page {
+    max-width: 80rem;       
+    margin: 6rem auto 6rem; 
+    padding: 0 2rem;   
+  }
+  header {
+    max-width: 117rem;
+  }
+  .container {    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .imagens img {
+    max-width: 22rem;
+  }
+  
+}
+@media (min-width: 900px){
+  .page {
+    display: flex;
+    max-width: 128rem;
+    
+  }
+  header {
+    min-width: 37.7rem;
+    height: 82rem;
+  }
+  header h1 {
+    font-size: 4.8rem;
+  }
+  header p {
+    font-size: 2rem;
+  }
+  main {
+    max-width: 90.3rem;
+    max-height: 88.2rem;
+    margin-top: 6rem;    
+    object-fit: contain;
+  }
+  .container {
+    width: 100%;
+    margin: 4rem 8.1rem 5rem 9.8rem;
+    height: auto;
+    display: flex;   
+  }
+  .imagens {
+    height: 53.2rem;
+    display: grid;
+    gap: 3.2rem;
+  }
+  .imagens img {
+    width: 22rem;
+  }  
+  footer {
+    margin: 0;
+  }
+  
+}
